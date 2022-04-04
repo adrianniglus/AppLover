@@ -1,0 +1,74 @@
+name: applover
+description: A new Flutter project starter.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  async: ^2.8.2
+  auto_route: ^3.2.4
+  bloc_test: ^9.0.2
+  dio: ^4.0.4
+  equatable: 2.0.3
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^8.0.1
+  flutter_device_type: 0.4.0
+  flutter_html: ^2.2.1
+  flutter_localizations:
+    sdk: flutter
+  flutter_screenutil: ^5.3.1
+  flutter_secure_storage: ^5.0.2
+  freezed: ^1.1.0
+  get_it: 7.2.0
+  injectable: ^1.5.3
+  intl: 0.17.0
+  json_serializable: ^6.1.4
+  provider: ^6.0.2
+  retrofit: ^3.0.1
+  shared_preferences: ^2.0.12
+  pretty_dio_logger: ^1.2.0-beta-1
+  flutter_native_splash: ^2.0.1+1
+  flutter_svg: ^0.23.0
+  font_awesome_flutter: ^10.1.0
+  string_validator: ^0.3.0
+
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  auto_route_generator: ^3.2.3
+  build_runner: ^2.1.7
+  flutter_lints: 1.0.4
+  injectable_generator: 1.5.2
+  retrofit_generator: ^3.0.1+1
+  mockito: ^5.1.0
+
+
+flutter:
+  uses-material-design: true
+  fonts:
+    - family: Roboto-Regular
+      fonts:
+        - asset: assets/fonts/Roboto-Regular.ttf
+
+  assets:
+    - assets/images/logo/
+
+flutter_native_splash:
+  color: "#FFFFFF"
+  image: assets/images/splash_screen/splash_screen.png
+  android: true
+  ios: true
+  android_gravity: fill
+  ios_content_mode: scaleAspectFill
+
+flutter_intl:
+  enabled: true
+  class_name: Strings
+  main_locale: en

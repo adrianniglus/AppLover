@@ -1,0 +1,12 @@
+{
+    "@@locale": "en",
+    "login_page_title": "Login",
+    "login_page_email_input": "Email address",
+    "login_page_password_input": "Password",
+    "login_page_button": "Login",
+    "login_page_successs_message": "Success",
+    "login_page_invalid_email_message": "Invalid email address!",
+    "login_page_invalid_password_message": "Password cannot be empty!",
+    "login_page_failed_message": "Invalid credentials! Try again.",
+    "default_text": "DEFAULT TEXT"
+}
