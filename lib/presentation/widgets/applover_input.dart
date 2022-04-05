@@ -34,6 +34,9 @@ class _ApploverInputState extends State<ApploverInput>
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      keyboardType: widget.inputType == InputType.email
+          ? TextInputType.emailAddress
+          : null,
       validator: (value) => isInputValid(context, value, widget.inputType),
       controller: widget.controller,
       cursorColor: context.getColors().white,
