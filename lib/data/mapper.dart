@@ -7,7 +7,7 @@ class Mapper {
   UserCredentialsDto userCredentialsToUserCredentialsDto(
           UserCredentials userCredentials) =>
       UserCredentialsDto(
-        username: userCredentials.value,
+        email: userCredentials.email,
         password: userCredentials.password,
       );
 

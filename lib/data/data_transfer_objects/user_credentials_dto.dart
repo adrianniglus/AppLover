@@ -3,11 +3,11 @@ part 'user_credentials_dto.g.dart';
 
 @JsonSerializable()
 class UserCredentialsDto {
-  final String username;
+  final String email;
   final String password;
 
   UserCredentialsDto({
-    required this.username,
+    required this.email,
     required this.password,
   });
 

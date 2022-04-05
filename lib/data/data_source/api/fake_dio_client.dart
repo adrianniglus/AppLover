@@ -2,13 +2,13 @@ import 'dart:developer' as logg;
 import 'dart:math';
 
 import 'package:applover/data/data_transfer_objects/auth_token_dto.dart';
-import 'package:applover/domain/entities/user_credentials.dart';
+import 'package:applover/data/data_transfer_objects/user_credentials_dto.dart';
 import 'package:injectable/injectable.dart';
 
 @injectable
 class FakeDioClient {
-  @override
-  Future<AuthTokenDto> login(UserCredentials userCredentials) async {
+  
+  Future<AuthTokenDto> login(UserCredentialsDto userCredentials) async {
     await Future.delayed(const Duration(seconds: 2));
     final random = Random().nextInt(100);
     if (random > 50) {

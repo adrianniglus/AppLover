@@ -5,7 +5,7 @@ import 'package:injectable/injectable.dart';
 const tokenKey = 'token';
 
 @singleton
-class FlickitSecureStorage {
+class ApploverSecureStorage {
   final _storage = const FlutterSecureStorage();
 
   Future<void> save(AuthTokenDto authToken) async {

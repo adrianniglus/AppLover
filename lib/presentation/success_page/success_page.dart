@@ -1,5 +1,7 @@
 import 'dart:async';
+import 'package:animate_do/animate_do.dart';
 import 'package:applover/presentation/login_page/cubit/login_cubit.dart';
+import 'package:applover/presentation/widgets/applover_back_button.dart';
 import 'package:applover/presentation/widgets/applover_button.dart';
 import 'package:applover/presentation/widgets/applover_input.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -11,6 +13,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:applover/generated/l10n.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SuccessPage extends StatelessWidget with ExtensionMixin {
   const SuccessPage({
@@ -28,29 +31,41 @@ class SuccessPage extends StatelessWidget with ExtensionMixin {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               SizedBox(
-                height: 160.h,
+                height: 60.h,
               ),
               Align(
-                alignment: Alignment.center,
-                child: SvgPicture.asset(
-                  'assets/images/logo/applover.svg',
-                  color: context.getColors().white,
-                  height: 140.h,
+                alignment: Alignment.centerLeft,
+                child: ApploverBackButton(
+                  circleColor: context.getColors().white,
+                  iconColor: context.getColors().grey,
+                  onTap: () =>
+                      AutoRouter.of(context).replace(const LoginRoute()),
+                ),
+              ),
+              SizedBox(
+                height: 80.h,
+              ),
+              FadeInUp(
+                child: Align(
+                  alignment: Alignment.center,
+                  child: SvgPicture.asset(
+                    'assets/images/logo/applover.svg',
+                    color: context.getColors().white,
+                    height: 140.h,
+                  ),
                 ),
               ),
               SizedBox(
                 height: 35.h,
               ),
-              Text(
-                Strings.of(context).login_page_successs_message,
-                style: AppTypography.w400size28.copyWith(
-                  color: context.getColors().white,
+              FadeInUp(
+                child: Text(
+                  Strings.of(context).login_page_successs_message,
+                  style: AppTypography.w400size28.copyWith(
+                    color: context.getColors().white,
+                  ),
                 ),
               ),
-              SizedBox(
-                height: 50.h,
-              ),
-              
             ],
           ),
         ));
